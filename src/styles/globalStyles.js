@@ -1,10 +1,7 @@
 import { StyleSheet } from 'aphrodite';
 
 export const globalStyles = StyleSheet.create({
-    red:{
-        color:"red"
-    },
-    blue:{
-        color:"blue"
+    mainBackgroundColor: {
+        backgroundColor: '#f5f5f5',
     }
 });

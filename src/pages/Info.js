@@ -4,6 +4,7 @@ import { css } from "aphrodite";
 import { infoStyles } from "../styles/infoStyles";
 import InfoHeader from "../components/InfoHeader";
 import InfoCharts from "../components/InfoCharts";
+import { backButtonStyles } from "../styles/backButtonStyles";
 
 export const Info = () => {
 
@@ -30,7 +31,7 @@ export const Info = () => {
 
     return ( pokemonInfo && Object.keys(pokemonInfo).length > 0 ? 
     <div className={css(infoStyles.infoPage)}>
-        <button onClick={()=>returnToMain()}>Back</button>
+        <button className={css(backButtonStyles.backButton)} onClick={()=>returnToMain()}>Back</button>
         <br/><br/>
 
         <InfoHeader pokemonInfo={pokemonInfo}/>

@@ -1,5 +1,7 @@
 import { useContext } from "react";
 import { Context } from "../context";
+import { css } from "aphrodite";
+import { seeMoreStyles } from "../styles/seeMoreStyles";
 
 export default function SeeMoreButton(){
 
@@ -17,6 +19,9 @@ export default function SeeMoreButton(){
     }
 
     return (<div>
-        <button style={{cursor:"pointer"}} onClick={() => seeMore()}>See More</button>
+        <button 
+        className={css(seeMoreStyles.seeMore)} 
+        style={{cursor:"pointer"}} 
+        onClick={() => seeMore()}>See More</button>
     </div>)
 }

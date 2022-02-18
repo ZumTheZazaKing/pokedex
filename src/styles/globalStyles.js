@@ -12,6 +12,7 @@ export const globalStyles = StyleSheet.create({
         flexDirection: 'column',
         alignItems: 'center',
         justifyContent: 'center',
+        padding:"20px"
     },
     pokemonList:{
         display:"grid",

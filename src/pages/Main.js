@@ -22,9 +22,11 @@ export const Main = () => {
     },[])
 
     return (<div id="Main" className={css(globalStyles.mainPage)}>
-        <h1>ZumPokeDex</h1>
+        <h1>ZumPOKeDeX</h1>
         <p>Gotta search em all!</p>
+        <br/>
         <SearchBar />
+        <br/>
         <div className={css(globalStyles.pokemonList)}>
             <Suspense fallback={<div>Loading...</div>}>
                 {pokemon && pokemon.map((p,i) => <Pokemon key={i} info={p} />)}

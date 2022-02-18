@@ -2,7 +2,13 @@ import { StyleSheet } from "aphrodite";
 
 export const infoStyles = StyleSheet.create({
     infoPage:{
-        padding:"20px"
+        width:"100%",
+        marginLeft:"auto",
+        marginRight:"auto",
+        padding:"20px",
+        '@media (min-width: 900px)':{
+            width:"80%"
+        }
     },
     displayFlexSbCenter:{
         display:"flex",

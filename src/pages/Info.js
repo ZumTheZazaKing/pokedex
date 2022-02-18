@@ -34,7 +34,6 @@ export const Info = () => {
         <br/><br/>
 
         <InfoHeader pokemonInfo={pokemonInfo}/>
-        <br/>
         <InfoCharts pokemonInfo={pokemonInfo}/>
 
     </div> : <h3>Loading</h3>)

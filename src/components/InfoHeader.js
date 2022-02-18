@@ -1,6 +1,6 @@
 import { css } from "aphrodite";
 import { infoStyles } from "../styles/infoStyles";
-import { globalStyles } from "../styles/globalStyles";
+import PokemonType from "./PokemonType";
 
 export default function InfoHeader(props){
 
@@ -15,6 +15,8 @@ export default function InfoHeader(props){
                     <img
                         src={`https://unpkg.com/pokeapi-sprites@2.0.2/sprites/pokemon/other/dream-world/${pokemonInfo.id}.svg`}
                         alt={pokemonInfo.name}
+                        width="300px"
+                        height="300px"
                     />
                 </div>
             </div>
@@ -22,11 +24,7 @@ export default function InfoHeader(props){
                 <h1 style={{textAlign:"right"}}>No. {pokemonInfo.id}</h1>
                 <p>
                     <span className={css(infoStyles.boldText)}>Type:</span>
-                    {pokemonInfo.types.map((t,i) => 
-                        <span key={i}>
-                            &nbsp;{String(t.type.name).charAt(0).toUpperCase() + String(t.type.name).slice(1)}
-                        </span>)
-                    }
+                    {pokemonInfo.types.map((t,i) => <PokemonType key={i} type={t.type.name}/>)}
                 </p>
                 <br/>
                 <p>

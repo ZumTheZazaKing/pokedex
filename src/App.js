@@ -4,6 +4,7 @@ import { lazy, Suspense, useState } from 'react';
 import { Context } from './context';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Loading from './components/Loading';
 
 const Main = lazy(() => import('./pages/Main').then(module => ({default:module.Main})));
 const Info = lazy(() => import('./pages/Info').then(module => ({default:module.Info})));
@@ -24,7 +25,14 @@ function App() {
         loadingMore, setLoadingMore
       }}>
         <div className='App'>
-          <Suspense fallback={<div>Loading...</div>}>
+          <Suspense fallback={<div style={
+            {
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              height:"100vh",
+              width:"100vw"
+            }}><Loading/></div>}>
             <Routes>
               <Route path='/' element={<Main />} />
               <Route path='/:pokemon' element={<Info />} />

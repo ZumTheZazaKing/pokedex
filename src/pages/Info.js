@@ -5,6 +5,7 @@ import { infoStyles } from "../styles/infoStyles";
 import InfoHeader from "../components/InfoHeader";
 import InfoCharts from "../components/InfoCharts";
 import { backButtonStyles } from "../styles/backButtonStyles";
+import Loading from "../components/Loading";
 
 export const Info = () => {
 
@@ -37,5 +38,11 @@ export const Info = () => {
         <InfoHeader pokemonInfo={pokemonInfo}/>
         <InfoCharts pokemonInfo={pokemonInfo}/>
 
-    </div> : <h3>Loading</h3>)
+    </div> : <div style={{
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        height:"100vh",
+        width: "100vw",
+    }}><Loading/></div>)
 }

@@ -4,6 +4,7 @@ import { useEffect, useContext, lazy, Suspense } from "react";
 import { Context } from "../context";
 import { css } from 'aphrodite';
 import { globalStyles } from "../styles/globalStyles";
+import Loading from "../components/Loading";
 
 const Pokemon = lazy(() => import('../components/Pokemon').then(module => ({ default: module.Pokemon })));
 
@@ -33,7 +34,7 @@ export const Main = () => {
             </Suspense>
         </div>
         <br/>
-        {loadingMore ? <h3>Loading</h3> : <SeeMoreButton/>}
+        {loadingMore ? <Loading/> : <SeeMoreButton/>}
         <br/>
     </div>)
 }

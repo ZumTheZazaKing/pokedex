@@ -62,7 +62,10 @@ export default function InfoHeader(props){
                     <p>
                         <span className={css(infoStyles.boldText)}>Habitat</span>
                         <br/>
-                        {String(pokemonInfo.habitat.name).charAt(0).toUpperCase() + String(pokemonInfo.habitat.name).slice(1)}
+                        {pokemonInfo.habitat ? 
+                            String(pokemonInfo.habitat.name).charAt(0).toUpperCase() 
+                            + String(pokemonInfo.habitat.name).slice(1)
+                        : <span>Unknown</span>}
                     </p>
                     <p>
                         <span className={css(infoStyles.boldText)}>Held Items</span>

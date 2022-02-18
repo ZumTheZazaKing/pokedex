@@ -2,6 +2,8 @@ import './styles/global.css';
 import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import { lazy, Suspense, useState } from 'react';
 import { Context } from './context';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Main = lazy(() => import('./pages/Main').then(module => ({default:module.Main})));
 const Info = lazy(() => import('./pages/Info').then(module => ({default:module.Info})));
@@ -27,6 +29,17 @@ function App() {
               <Route path='/' element={<Main />} />
               <Route path='/:pokemon' element={<Info />} />
             </Routes>
+            <ToastContainer
+              position="bottom-right"
+              autoClose={5000}
+              hideProgressBar={false}
+              newestOnTop={false}
+              closeOnClick
+              rtl={false}
+              pauseOnFocusLoss
+              draggable
+              pauseOnHover
+            />
           </Suspense>
         </div>
       </Context.Provider>

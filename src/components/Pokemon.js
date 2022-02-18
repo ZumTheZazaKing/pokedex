@@ -1,12 +1,18 @@
 import { css } from 'aphrodite';
 import { globalStyles } from '../styles/globalStyles';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
+import { useNavigate } from 'react-router-dom';
 
 export const Pokemon = (props) => {
 
     const { name, url } = props.info;
+    const navigate = useNavigate();
 
-    return (<div className={css(globalStyles.pokemonListItem)}>
+    const handleClick = () => {
+        navigate(`/${name}`);
+    }
+
+    return (<div onClick={() => handleClick()} className={css(globalStyles.pokemonListItem)}>
         <LazyLoadImage 
             src={`https://unpkg.com/pokeapi-sprites@2.0.2/sprites/pokemon/other/dream-world/${String(url).split('/')[6]}.svg`}
             width={100}

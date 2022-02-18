@@ -9,7 +9,7 @@ const Pokemon = lazy(() => import('../components/Pokemon').then(module => ({ def
 
 export const Main = () => {
 
-    const { pokemon, setPokemon, setNextURL, loadingMore } = useContext(Context);
+    const { pokemon, setPokemon, setNextURL, loadingMore, setLoadingMore } = useContext(Context);
 
     useEffect(() => {
         fetch('https://pokeapi.co/api/v2/pokemon/')
@@ -17,6 +17,7 @@ export const Main = () => {
         .then(data => {
             setPokemon(data.results);
             setNextURL(data.next);
+            setLoadingMore(false);
         })
     },[])
 

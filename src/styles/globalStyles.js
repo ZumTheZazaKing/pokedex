@@ -1,6 +1,9 @@
 import { StyleSheet } from 'aphrodite';
 
 export const globalStyles = StyleSheet.create({
+    blackBorder:{
+        border:"1px solid black",
+    },
     mainBackgroundColor: {
         backgroundColor: '#f5f5f5',
     },

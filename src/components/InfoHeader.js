@@ -1,7 +1,7 @@
 import { css } from "aphrodite";
 import { infoStyles } from "../styles/infoStyles";
 import PokemonType from "./PokemonType";
-import SpecialTag from "./SpecialTag";
+import SpecialTag from './SpecialTag'
 
 export default function InfoHeader(props){
 

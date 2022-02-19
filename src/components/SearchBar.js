@@ -18,7 +18,8 @@ export default function SearchBar(){
             if(res.status === 404){
                 toast.error("That Pokemon doesn't exist")
             }else{
-                navigate(`/${searchQuery}`)
+                navigate(`/${searchQuery}`);
+                setSearchQuery("")
             }
         })
     }

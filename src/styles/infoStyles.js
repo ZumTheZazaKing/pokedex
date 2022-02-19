@@ -84,4 +84,15 @@ export const infoStyles = StyleSheet.create({
         fontWeight:"bold",
         fontSize:"18px"
     },
+    evolutionContainer:{
+        padding:"20px",
+    },
+    evoChainContainer:{
+        display:"grid",
+        gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
+        
+    },
+    evolutionStage:{
+        textAlign:"center"
+    }
 })

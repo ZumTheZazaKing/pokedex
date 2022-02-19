@@ -1,7 +1,8 @@
 import { css } from "aphrodite";
 import { infoStyles } from "../styles/infoStyles";
 import PokemonType from "./PokemonType";
-import SpecialTag from './SpecialTag'
+import SpecialTag from './SpecialTag';
+import InfoDescription from "./InfoDescription";
 
 export default function InfoHeader(props){
 
@@ -41,7 +42,7 @@ export default function InfoHeader(props){
                 <p>
                     <span className={css(infoStyles.boldText)}>Description</span>
                     <br/>
-                    {pokemonInfo.flavor_text_entries[0].flavor_text}
+                    <InfoDescription pokemonInfo={pokemonInfo.flavor_text_entries}/>
                 </p>
                 <br/>
                 <div className={css(infoStyles.displayFlexSbCenter)}>

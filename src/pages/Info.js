@@ -4,6 +4,7 @@ import { css } from "aphrodite";
 import { infoStyles } from "../styles/infoStyles";
 import InfoHeader from "../components/InfoHeader";
 import InfoCharts from "../components/InfoCharts";
+import InfoEvolution from "../components/InfoEvolution";
 import { backButtonStyles } from "../styles/backButtonStyles";
 import Loading from "../components/Loading";
 
@@ -37,6 +38,7 @@ export const Info = () => {
 
         <InfoHeader pokemonInfo={pokemonInfo}/>
         <InfoCharts pokemonInfo={pokemonInfo}/>
+        <InfoEvolution pokemonInfo={pokemonInfo}/>
 
     </div> : <div style={{
         display: 'flex',

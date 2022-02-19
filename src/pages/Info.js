@@ -4,7 +4,7 @@ import { css } from "aphrodite";
 import { infoStyles } from "../styles/infoStyles";
 import InfoHeader from "../components/InfoHeader";
 import InfoCharts from "../components/InfoCharts";
-import InfoEvolution from "../components/InfoEvolution";
+import InfoEvolution from '../components/InfoEvolution';
 import { backButtonStyles } from "../styles/backButtonStyles";
 import Loading from "../components/Loading";
 

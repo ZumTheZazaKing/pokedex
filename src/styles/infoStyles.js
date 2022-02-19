@@ -10,6 +10,27 @@ export const infoStyles = StyleSheet.create({
             width:"80%"
         }
     },
+    pokemonName:{
+        fontSize:"32px",
+        fontWeight:"bold",
+        textTransform:"capitalize",
+        display: 'flex',
+        alignItems: 'center',
+        
+    },
+    tag:{
+        fontSize:"16px",
+        marginLeft:"20px",
+        color:"white",
+        padding:"5px 10px",
+        borderRadius:"10px"
+    },
+    mythicalTag:{
+        backgroundColor:"deeppink"
+    },
+    legendaryTag:{
+        backgroundColor:"orange"
+    },
     displayFlexSbCenter:{
         display:"flex",
         justifyContent:"space-between",

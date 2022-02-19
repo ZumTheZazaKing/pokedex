@@ -1,6 +1,7 @@
 import { css } from "aphrodite";
 import { infoStyles } from "../styles/infoStyles";
 import PokemonType from "./PokemonType";
+import SpecialTag from "./SpecialTag";
 
 export default function InfoHeader(props){
 
@@ -9,7 +10,17 @@ export default function InfoHeader(props){
     return (
         <div className={css(infoStyles.header)}>
             <div className={css([infoStyles.leftHeader])}>
-                <h1>{String(pokemonInfo.name).charAt(0).toUpperCase() + String(pokemonInfo.name).slice(1)}</h1>
+                <div>
+                    <p className={css(infoStyles.pokemonName)}>
+                        {String(pokemonInfo.name)}
+                        <SpecialTag pokemonInfo={pokemonInfo}/>
+                    </p>
+                    <p>{pokemonInfo.genera.map(nick => {
+                        if(nick.language.name === "en"){
+                            return nick.genus
+                        }
+                    })}</p>
+                </div>
                 <br/>
                 <div className={css(infoStyles.leftHeaderImageContainer)}>
                     <img
@@ -21,7 +32,7 @@ export default function InfoHeader(props){
                 </div>
             </div>
             <div className={css([infoStyles.rightHeader])}>
-                <h1 style={{textAlign:"right"}}>No. {pokemonInfo.id}</h1>
+                <h1 style={{textAlign:"right"}}>#{pokemonInfo.id}</h1>
                 <p>
                     <span className={css(infoStyles.boldText)}>Type:</span>
                     {pokemonInfo.types.map((t,i) => <PokemonType key={i} type={t.type.name}/>)}
